@@ -61,7 +61,7 @@ body,html {
 .nav-search{
     border: 1px solid #444d56;
     border-radius: 4px;
-    padding: 2px 8px 2px 4px;
+    padding: 4px 8px 4px 4px;
     margin-left: 15px;
     min-width: 272px;
 }
@@ -70,7 +70,7 @@ body,html {
     .nav-search{
         width: 100%;
         margin-left: 0;
-        padding: 3px 8px 3px 4px;
+        padding: 5px 8px 5px 4px;
         margin-bottom: 10px
     }
 }
@@ -194,7 +194,8 @@ body,html {
 }
 
 .github-img{
-    width: 32px
+    width: 32px;
+    border-radius: 50%;
 }
 
 .mobile-dropdown{
@@ -245,12 +246,140 @@ body,html {
 /* details section */
 
 .details{
-    background-color: red
+  margin-top:24px;
+  display: flex
+}
+
+.profile{
+    width: 280px;
+    padding-top: 16px;
+    
+}
+
+.profile-img-div{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 0
+}
+
+.profile-img-div img{
+    width: 280px;
+    border-radius: 50%;
+}
+
+.small-screen-smiley{
+    display: none;
+}
+
+.big-screen-smiley{
+    position: absolute;
+    right: 5px;
+    bottom: 25%;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgb(211, 206, 206);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.big-screen-smiley img{
+    width: 16px !important
+}
+
+@media screen and (max-width: 767px) {
+    .profile{
+        width: 100%;
+        padding-top: 0 !important
+    }
+
+    .profile-img-div img{
+        width: 16%;
+        border-radius: 50%;
+    }
+
+    .profile-img-div{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px !important
+    }
+
+    .profile-img-div p{
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+
+    .details{
+        margin-top: 0 !important
+    }
+    
+    .small-screen-smiley{
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+        width: 100%;
+        height: 33px;
+        margin-bottom: 16px;
+        padding: 4px 10px;
+        background-color: #ffffff;
+        border-style: none;
+        border: 1px solid rgba(27,31,35,0.15);
+        border-radius: 3px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
+    }
+
+    .small-screen-smiley p{
+        margin: 0;
+        margin-left: 10px;
+        font-weight: 400;
+
+    }
+
+    .big-screen-smiley{
+        display: none
+    }
+
+    .twitter, .organizations{
+        display: none
+    }
+
+    .website{
+        margin-top: -6px !important
+    }
+}
+
+.profile .edit-btn{
+    width: 100%;
+    height: 32px;
+    margin-bottom: 16px;
+    padding: 5px 16px;
+    background-color: #fafbfc;
+    border-style: none;
+    border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
+}
+
+.followers{
+    display: flex;
+    font-size: 14px !important;
+    align-items: center;
+}
+
+.followers p, .followers i {
+    margin-left: 10px
 }
 
 @media screen and (max-width: 767px){
     .details{
-        padding: 16px;
+        padding: 0 16px 0 16px;
         display: flex;
         flex-direction: column;
     }
@@ -258,21 +387,21 @@ body,html {
 
 @media screen and (min-width:768px) and (max-width: 1011px){
     .details{
-        padding: 24px;
+        padding: 0 24px 0 24px;
         display: flex;
     }
 }
 
 @media screen and (min-width: 1012px) and (max-width: 1280px){
     .details{
-        padding: 32px;
+        padding: 0 32px 0 32px;
         display: flex;
     }
 }
 
 @media screen and (min-width: 1281px){
     .details{
-        padding: 32px;
+        padding: 0 32px 0 32px;
         margin-left: calc((100vw - 1280px) / 2);
         margin-right: calc((100vw - 1280px) / 2);
         display: flex;
