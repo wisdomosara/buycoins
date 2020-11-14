@@ -330,69 +330,7 @@ body,html {
     margin-right: 5px
 }
 
-@media screen and (max-width: 767px) {
-    .profile{
-        width: 100%;
-        padding-top: 0 !important
-    }
 
-    .profile-img-div img{
-        width: 16%;
-        border-radius: 50%;
-    }
-
-    .profile-img-div{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 30px !important
-    }
-
-    .profile-img-div p{
-        margin-left: 30px;
-        margin-bottom: 0;
-    }
-
-    .details{
-        margin-top: 0 !important
-    }
-    
-    .small-screen-smiley{
-        display: flex;
-        justify-content: flex-start !important;
-        align-items: center;
-        width: 100%;
-        height: 33px;
-        margin-bottom: 16px;
-        padding: 4px 10px;
-        background-color: #ffffff;
-        border-style: none;
-        border: 1px solid rgba(27,31,35,0.15);
-        border-radius: 3px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: bold;
-        box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
-    }
-
-    .small-screen-smiley p{
-        margin: 0;
-        margin-left: 10px;
-        font-weight: 400;
-
-    }
-
-    .big-screen-smiley{
-        display: none
-    }
-
-    .twitter, .organizations{
-        display: none
-    }
-
-    .website{
-        margin-top: -6px !important;
-
-    }
-}
 
 .profile .edit-btn{
     width: 100%;
@@ -412,7 +350,8 @@ body,html {
     display: flex;
     font-size: 14px !important;
     align-items: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .followers p, .followers i {
@@ -467,6 +406,7 @@ body,html {
     padding: 0;
     margin: 0;
     align-items: center;
+    overflow: auto;
 
 }
 
@@ -521,4 +461,79 @@ body,html {
     font-size: 12px;
     justify-content: center;
     align-items: center;
+}
+
+/* mobile screen */
+
+@media screen and (max-width: 767px) {
+    .profile{
+        width: 100%;
+        padding-top: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .profile-img-div img{
+        width: 16%;
+        border-radius: 50%;
+    }
+
+    .profile-img-div{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px !important
+    }
+
+    .profile-img-div p{
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+
+    .details{
+        margin-top: 0 !important;
+        
+    }
+    
+    .small-screen-smiley{
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+        width: 100%;
+        height: 33px;
+        margin-bottom: 16px;
+        padding: 4px 10px;
+        background-color: #ffffff;
+        border-style: none;
+        border: 1px solid rgba(27,31,35,0.15);
+        border-radius: 3px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
+    }
+
+    .small-screen-smiley p{
+        margin: 0;
+        margin-left: 10px;
+        font-weight: 400;
+
+    }
+
+    .big-screen-smiley{
+        display: none
+    }
+
+    .twitter, .organizations{
+        display: none
+    }
+
+    .website{
+
+    }
+
+    .repos{
+        padding: 0
+    }
+
+    .repo-icon{
+        display: none
+    }
 }
