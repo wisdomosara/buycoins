@@ -294,6 +294,16 @@ body,html {
     width: 16px !important
 }
 
+.organizations{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.organizations a{
+    margin-right: 15px
+}
+
 @media screen and (max-width: 767px) {
     .profile{
         width: 100%;
@@ -382,15 +392,7 @@ body,html {
     color: #586069
 }
 
-.organizations{
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-}
 
-.organizations a{
-    margin-right: 15px
-}
 
 @media screen and (max-width: 767px){
     .details{
