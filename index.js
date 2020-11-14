@@ -1,4 +1,10 @@
 let id = "f07f000cfcc1b8dd68ba220e727566be48f159f4"
+
+let menu = document.querySelector(".menu")
+let menuDropdown = document.querySelector(".mobile-dropdown")
+menu.addEventListener("click", function(){
+  menuDropdown.classList.toggle("close")
+})
 let data = {}
     const options = {
         method: "post",

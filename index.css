@@ -1,13 +1,18 @@
 body,html {
     margin: 0;
-    padding: 0
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    box-sizing: border-box
 }
 
 .big-screen-nav nav{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(26, 22, 22, 0.931);
-    padding: 16px 2% 16px 2%;
+    background-color: #24292e;
+    padding: 15px 2.27% 15px 2.27%;
 }
 
 @media screen and (max-width: 767px) {
@@ -16,8 +21,10 @@ body,html {
     }
 }
 
-.big-screen-nav-left{
-    width: 75%
+
+
+.big-screen-nav-left img{
+    width: 32px;
 }
 
 .big-screen-nav ul{
@@ -28,6 +35,8 @@ body,html {
 .big-screen-nav li{
     margin-right: 15px;
     color: white;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .center-flex{
@@ -36,13 +45,36 @@ body,html {
     margin-right: 15px
 }
 
+.tab-list{
+    display: none
+}
+
+@media screen and (max-width: 1012px) {
+    .tab-list{
+        display: flex
+    }
+    .big-screen-list{
+        display: none
+    }
+}
+
 .nav-search{
     border: 1px solid #444d56;
     border-radius: 4px;
-    padding: 4px;
+    padding: 2px 8px 2px 4px;
     margin-left: 15px;
     min-width: 272px;
 }
+
+@media screen and (max-width: 767px) {
+    .nav-search{
+        width: 100%;
+        margin-left: 0;
+        padding: 3px 8px 3px 4px;
+        margin-bottom: 10px
+    }
+}
+
 .nav-search input{
     outline: none;
     width: 100%;
@@ -53,8 +85,9 @@ body,html {
 }
 .nav-search input::placeholder{
    
-    color: white;
-  
+    color: #afaeae;
+    font-weight: 600;
+    
 }
 
 .search-icon{
@@ -63,12 +96,12 @@ body,html {
     padding: 2px;
     font-size: 10px;
     margin-left: 7px;
-    width: 8px;
+    width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    color: white
+    color: #6d6b6b;
 }
 
 .big-screen-nav-right i{
@@ -84,6 +117,10 @@ body,html {
     margin-right: 10px;
 }
 
+.notification i{
+    font-size: 16px !important
+}
+
 @media screen and (max-width: 767px) {
     .notification{
         margin-right: 0
@@ -93,22 +130,27 @@ body,html {
 .notification .dot{
     position: absolute;
     top: 0;
-    width: 8px;
-    height: 8px;
-    background-color: blue;
+    width: 10px;
+    height: 10px;
+    background-color: #006eed;
     margin-left: 6px;
     border-radius: 50%
 }
 
 .add p{
-    font-size:22px;
+    font-size:25px;
     margin:0; 
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: -5px;
     color:white
 }
 .add i{
     font-size:12px;
+}
+
+.profile-dropdown{
+    margin-right: 0 !important
 }
 
 .profile-dropdown i{
@@ -124,14 +166,14 @@ body,html {
 /* mobile nav */
 
 .small-screen-nav{
-    background-color: rgba(26, 22, 22, 0.931);
+    background-color: #24292e;
     color: white
 }
 .small-screen-nav nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 15px 10px;
+    padding: 15px 16px 14px 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,8 +182,28 @@ body,html {
     }
 }
 
+.bar{
+    background-color: rgb(219, 215, 215);
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.bar:last-child{
+    margin-bottom: 0;
+}
+
+.github-img{
+    width: 32px
+}
+
 .mobile-dropdown{
-    padding: 1px 10px 1px 10px
+    padding: 1px 16px 1px 16px;
+    display: none
+}
+
+.close{
+    display: block
 }
 
 .mobile-dropdown ul{
@@ -151,9 +213,11 @@ body,html {
 }
 
 .mobile-dropdown ul li{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #e1e4e844;
     padding-top: 8px;
     padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600
 }
 
 .mobile-dropdown ul li:last-child{
@@ -162,15 +226,7 @@ body,html {
     padding-bottom: 20px;
 }
 
-.mobile-search{
-    border: 1px solid white;
-    border-radius: 4px;
-    padding: 4px;
-    outline: none;
-    width: 100%;
-    margin-bottom: 5px;
-    background-color: transparent
-}
+
 
 .mobile-menu-login img{
     border-radius: 50%;
@@ -184,4 +240,41 @@ body,html {
 
 .sign-out p{
     margin: 0
+}
+
+/* details section */
+
+.details{
+    background-color: red
+}
+
+@media screen and (max-width: 767px){
+    .details{
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1011px){
+    .details{
+        padding: 24px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1012px) and (max-width: 1280px){
+    .details{
+        padding: 32px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1281px){
+    .details{
+        padding: 32px;
+        margin-left: calc((100vw - 1280px) / 2);
+        margin-right: calc((100vw - 1280px) / 2);
+        display: flex;
+    }
 }

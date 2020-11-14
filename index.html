@@ -14,13 +14,19 @@
         <div class="big-screen-nav">
             <nav>
                 <div class="big-screen-nav-left center-flex">
-                    <img src="./images/github-logo.png" alt="" width="32px">
+                    <img src="./images/github-logo.png" alt="">
                     <div class="nav-search center-flex">
                         <input type="search" placeholder="Search or jump to...">
                         <div class="search-icon">/</div>
                     </div>
-                    <ul class="center-flex">
-                        <li>Pull</li>
+                    <ul class="center-flex big-screen-list">
+                        <li>Pull requests</li>
+                        <li>Issues</li>
+                        <li>Marketplace</li>
+                        <li>Explore</li>
+                    </ul>
+                    <ul class="center-flex tab-list">
+                        <li>Pulls</li>
                         <li>Issues</li>
                         <li>Marketplace</li>
                         <li>Explore</li>
@@ -42,10 +48,15 @@
                 </div>
             </nav>
         </div>
+        
         <div class="small-screen-nav">
             <nav>
-                <img src="" alt="">
-                <img src="" alt="">
+                <div class="menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <img src="./images/github-logo.png" alt="" class="github-img">
                 <div class="notification">
                     <i class="fas fa-bell"></i>
                     <div class="dot"></div>
@@ -54,7 +65,10 @@
             <div class="mobile-dropdown">
                 <ul>
                     <li>
-                        <input type="search" class="mobile-search" placeholder="Search">
+                        <div class="nav-search center-flex">
+                            <input type="search" placeholder="Search">
+                            <div class="search-icon">/</div>
+                        </div>
                     </li>
                     <li>Dashboard</li>
                     <li>Pull requests</li>
@@ -78,7 +92,16 @@
         </div>
 
     </header>
-    <div class="main"></div>
+    <section>
+       <div class="details">
+            <div class="profile">
+
+            </div>
+            <div class="repositories">
+                
+            </div>
+       </div> 
+    </section>
     <script src="./index.js"></script>
 </body>
 </html>
