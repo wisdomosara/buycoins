@@ -255,6 +255,10 @@ body,html {
     padding-top: 16px;
     
 }
+.profile p{
+    color: #24292e !important;
+    font-size: 14px 
+}
 
 .profile-img-div{
     display: flex;
@@ -374,7 +378,18 @@ body,html {
 }
 
 .followers p, .followers i {
-    margin-left: 10px
+    margin-left: 10px;
+    color: #586069
+}
+
+.organizations{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.organizations a{
+    margin-right: 15px
 }
 
 @media screen and (max-width: 767px){
