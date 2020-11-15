@@ -117,7 +117,9 @@ body,html {
     margin-right: 10px;
 }
 
-.notification i{
+.notification svg{
+    margin-top: 5px;
+    fill: white;
     font-size: 16px !important
 }
 
@@ -262,8 +264,9 @@ body,html {
     margin-top: 15px !important;
 }
 
-.website i{
-    margin-right: 5px
+.website svg{
+    margin-right: 5px;
+    min-width: 16px !important
 }
 
 .profile p{
@@ -368,7 +371,7 @@ body,html {
     margin-bottom: 25px;
 }
 
-.followers p, .followers i, .followers img {
+.followers p, .followers i, .followers svg{
     margin: 0;
     margin-right: 5px;
     color: #586069;
@@ -473,10 +476,9 @@ body,html {
     color: #24292e;
 }
 
-.repo-icon{
-    width: 20px;
-    height: 20px;
-    margin-right: 5px
+.repo-nav svg{
+    margin-right: 5px;
+
 }
 
 .repo-count{
@@ -564,6 +566,10 @@ body,html {
     color: white;
 }
 
+.new-repo .octicon-repo{
+    fill: white !important
+}
+
 .new-repo p{
     color: white;
     margin-left: 5px
@@ -595,24 +601,27 @@ body,html {
 
 .repo-options-div{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .repo-star{
     background-color: #fafafa;
     margin-bottom: 0;
-    align-items: baseline !important;
+    padding: 3px 12px;
+    font-size: 12px !important;
+    align-items: center !important;
     color: #24292e !important;
 }
 
 .repo-star p{
     color: #24292e !important;
+    font-weight: 300;
 }
 
 .options{
     display: flex;
     margin-top: 16px;
-    align-items: baseline;
+    align-items: flex-start;
     margin-right: 10px;
 }
 
@@ -622,8 +631,8 @@ body,html {
     font-size: 12px
 }
 
-.options i{
-    font-size: 12px
+.options svg{
+    width: 16px
 }
 
 /* tab screen */
@@ -669,6 +678,11 @@ body,html {
     .details{
         margin-top: 0 !important;
         
+    }
+
+    .sign-out svg{
+        fill: white;
+        margin-right: 7px
     }
     
     .small-screen-smiley{
@@ -717,8 +731,12 @@ body,html {
         width: 100%;
     }
 
-    .repo-icon{
+    .repo-nav svg{
         display: none
+    }
+
+    .repo-nav{
+        padding: 10px 13px
     }
 
     .repo-search{
