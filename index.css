@@ -407,8 +407,8 @@ body,html {
 @media screen and (min-width: 1281px){
     .details{
         padding: 0 32px 0 32px;
-        margin-left: calc((100vw - 1280px) / 2);
-        margin-right: calc((100vw - 1280px) / 2);
+        margin-left: calc((100% - 1280px) / 2);
+        margin-right: calc((100% - 1280px) / 2);
         display: flex;
     }
 }
@@ -416,8 +416,8 @@ body,html {
 /* Repositories */
 
 .repos{
-    padding-left: 20px;
-    padding-right: 16px;
+    padding-left: 32px;
+    padding-top: 10px;
     width: calc(100% - 280px);
 }
 
@@ -441,7 +441,6 @@ body,html {
     padding: 12px 16px;
     font-size: 14px;
     height: 32px
-
 }
 
 .repos ul li{
@@ -497,7 +496,9 @@ body,html {
 
 .repo-search{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .repo-search input{
@@ -527,7 +528,7 @@ body,html {
     justify-content: center;
     align-items: center;
     height: 32px;
-    margin-bottom: 16px;
+    
     margin-right: 6px;
     padding: 5px 16px;
     background-color: #fafbfc;
@@ -552,7 +553,8 @@ body,html {
 
 .repo-search-btn-div{
     display: flex;
-    width: 100%
+    width: 100%;
+
 }
 
 .new-repo{
@@ -567,7 +569,61 @@ body,html {
     margin-left: 5px
 }
 
+/* Repository-list */
 
+.repository{
+    display: flex;
+    padding: 24px 0 24px 0;
+    border-top: 1px solid #e4e2e2;
+    width: 100%;
+}
+
+.repository-left{
+    width: 100%;
+}
+
+.repository-left h3{
+    color: #0366d6;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.repository-right{
+    margin-left: 25px;
+}
+
+.repo-options-div{
+    display: flex;
+    align-items: center;
+}
+
+.repo-star{
+    background-color: #fafafa;
+    margin-bottom: 0;
+    align-items: baseline !important;
+    color: #24292e !important;
+}
+
+.repo-star p{
+    color: #24292e !important;
+}
+
+.options{
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+}
+
+.options p{
+    margin: 0;
+    margin-left: 6px;
+    font-size: 12px
+}
+
+.options i{
+    font-size: 12px
+}
 
 /* tab screen */
 
@@ -599,6 +655,7 @@ body,html {
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-top: 10px;
         margin-bottom: 30px !important
     }
 
