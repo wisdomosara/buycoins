@@ -612,7 +612,8 @@ body,html {
 .options{
     display: flex;
     margin-top: 16px;
-    align-items: center;
+    align-items: baseline;
+    margin-right: 10px;
 }
 
 .options p{
