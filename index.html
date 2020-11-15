@@ -108,8 +108,8 @@
                 <button class="edit-btn">Edit profile</button>
                 <div class="followers">
                     <img src="./images/people.png" alt="following" width="20px">
-                    <p>  6 followers</p>
-                    <p>  6 following</p>
+                    <p>6 followers</p>
+                    <p>6 following</p>
                     <i class="fas fa-star"></i>13
                 </div>
                 <p class="website"><i class="fas fa-link"></i>  wisdomosara.github.io/webport1</p>
@@ -160,7 +160,87 @@
                         </div>
                     </li>
                 </ul>
+                <div class="repo-search">
+                    <input type="search" placeholder="Find a repository">
+                    <div class="repo-search-btn-div">
+                        <button class="repo-search-btn">
+                            <p>Type: </p>
+                            <p class="input-type">Sources </p>
+                            <i class="fas fa-caret-down"></i>
+                            <div class="repo-dropdown-type">
+                                <div class="repo-dropdown-heading">
+                                    <p>Select Type</p>
+                                    <p class="close-repo">X</p>
+                                </div>
+                                <ul>
+                                    <li class="repo-dropdown-item" id="All">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>All</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Public">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Public</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Private">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Private</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Sources">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Sources</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Forks">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Forks</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Arhived">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Achieved</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Mirrors">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Mirrors</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </button>
+                        <button class="repo-search-btn">
+                            <p>Language: </p>
+                            <p class="input-language">Javascript </p>
+                            <i class="fas fa-caret-down"></i>
+                            <div class="repo-dropdown-language">
+                                <div class="repo-dropdown-heading">
+                                    <p>Select language</p>
+                                    <p class="close-repo">X</p>
+                                </div>
+                                <ul>
+                                    <li class="repo-dropdown-item" id="All">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>All</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="HTML">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>HTML</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="Javascript">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>Javascript</p>
+                                    </li>
+                                    <li class="repo-dropdown-item" id="CSS">
+                                        <p class="repo-dropdown-check"></p>
+                                        <p>CSS</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </button>
+                        <button class="repo-search-btn new-repo">
+                            <i class="fas fa-book"></i>
+                            <p>New</p>
+                        </button>
+                    </div>
+                </div>
             </div>
+            
        </div> 
     </section>
     <script src="./index.js"></script>
