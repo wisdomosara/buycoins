@@ -173,7 +173,7 @@ body,html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 16px 14px 16px;
+    padding: 16px 18px 16px 17px;
 }
 
 @media screen and (min-width: 768px) {
@@ -227,8 +227,6 @@ body,html {
     padding-bottom: 20px;
 }
 
-
-
 .mobile-menu-login img{
     border-radius: 50%;
     width: 30px
@@ -253,7 +251,7 @@ body,html {
 
 .profile{
     width: 280px;
-    padding: 16px 8px 0 8px;
+    padding: 16px 16px 0 0;
     
 }
 
@@ -261,6 +259,7 @@ body,html {
     overflow: hidden;
     display: flex;
     align-items: center;
+    margin-top: 15px !important;
 }
 
 .website i{
@@ -284,6 +283,12 @@ body,html {
     border-radius: 50%;
 }
 
+.profile-img-div p{
+    font-size: 20px;
+    font-weight: 300 !important;
+    color: #586069 !important
+}
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .profile-img-div img{
         width: 100%;
@@ -291,9 +296,8 @@ body,html {
     }
 
     .profile{
-        width: 25%;
+        width: 24%;
         padding-top: 16px;
-        
     }
     
 }
@@ -320,14 +324,24 @@ body,html {
     width: 16px !important
 }
 
+.website, .twitter{
+    margin: 0 !important;
+    margin-bottom: 5px !important
+}
+
 .organizations{
     display: flex;
     align-items: center;
+}
+
+.organizations-p{
+    margin-top: 35px !important;
     font-weight: 600;
 }
 
 .organizations a{
-    margin-right: 5px
+    margin-right: 5px;
+   
 }
 
 
@@ -351,7 +365,7 @@ body,html {
     font-size: 14px !important;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .followers p, .followers i, .followers img {
@@ -402,9 +416,9 @@ body,html {
 /* Repositories */
 
 .repos{
-    padding-left: 16px;
+    padding-left: 20px;
     padding-right: 16px;
-    width: calc(100% - 280px)
+    width: calc(100% - 280px);
 }
 
 
@@ -415,15 +429,22 @@ body,html {
     margin: 0;
     align-items: center;
     overflow: auto;
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    position: sticky;
+    width: 100%
 
 }
 
 .repo-nav{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 12px 16px;
     font-size: 14px;
+    height: 32px
+
+}
+
+.repos ul li{
     border-bottom: 1px solid rgb(228, 224, 224)
 }
 
@@ -482,7 +503,7 @@ body,html {
 .repo-search input{
     width:100%;
     height: 32px;
-    margin-right: 5px;
+    margin-right: 15px;
     margin-bottom: 16px;
     padding: 5px 12px;
     background-color: #ffffff;
@@ -507,7 +528,7 @@ body,html {
     align-items: center;
     height: 32px;
     margin-bottom: 16px;
-    margin-left: 6px;
+    margin-right: 6px;
     padding: 5px 16px;
     background-color: #fafbfc;
     border-style: none;
@@ -531,12 +552,13 @@ body,html {
 
 .repo-search-btn-div{
     display: flex;
-    justify-content: space-between;
+    width: 100%
 }
 
 .new-repo{
+    margin-left: auto !important;
     background-color: #2ea44f;
-    margin-left: 15px;
+    margin-right: 0 !important;
     color: white;
 }
 
@@ -552,8 +574,8 @@ body,html {
 
 @media screen and (min-width:767px) and (max-width: 1012px) {
     .repos{
-        width: calc(100% - 25%);
-        padding: 0 8px 0 8px
+        width: calc(100% - 24%);
+        padding: 0 0 0 8px
     }
 }
 
@@ -563,6 +585,7 @@ body,html {
 @media screen and (max-width: 767px) {
     .profile{
         width: 100%;
+        padding: 16px 0 0 0;
         padding-top: 0 !important;
         margin-bottom: 30px;
     }
@@ -575,12 +598,14 @@ body,html {
     .profile-img-div{
         display: flex;
         flex-direction: row;
+        align-items: center;
         margin-bottom: 30px !important
     }
 
     .profile-img-div p{
+        margin: 0;
         margin-left: 30px;
-        margin-bottom: 0;
+       
     }
 
     .details{
@@ -617,7 +642,11 @@ body,html {
         display: none
     }
 
-    .twitter, .organizations{
+    .followers{
+        margin-bottom: 10px !important
+    }
+
+    .twitter, .organizations, .organizations-p{
         display: none
     }
 
@@ -644,11 +673,11 @@ body,html {
     }
 
     .repo-search-btn{
-        margin-left: 10px;
+        margin-right: 10px;
         
     }
 
     .repo-search-btn-div{
-        overflow: auto
+        overflow: auto;
     }
 }
