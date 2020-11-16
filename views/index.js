@@ -12,6 +12,7 @@ let Website = document.querySelector(".website")
 let Twitter = document.querySelector(".twitter")
 let ProfilePic = document.querySelectorAll(".profilePic")
 let Organizations = document.querySelector(".organizations")
+let ProlifeStars = document.querySelector(".profileStars")
     
 fetch(`/api/github`)
 .then(res => res.json())
@@ -30,10 +31,17 @@ function createHtml(data) {
   let organizations = data.data.repositoryOwner.organizations.nodes
 
   Login.forEach(log=> log.textContent = login)
+
   Followers.textContent = `${followers} followers`
+
   Following.textContent = `${following} following`
+
+  ProlifeStars.innerHTML = `<svg class="octicon octicon-star text-gray-light" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>${totalCountTStarredRepo}`
+
   Website.innerHTML = `<svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg> ${websiteUrl}`
+
   Twitter.innerHTML = `<i class="fab fa-twitter"></i> @OsaraWisdom`
+  
   ProfilePic.forEach(pic => pic.src = avatarUrl)
 
   organizations.forEach(organization => {
@@ -53,6 +61,23 @@ function createHtml(data) {
   console.log(following, followers, organizations, repositories)
   repositories.forEach(repo => {
 
+                let apidate = new Date(repo.updatedAt)
+
+                let localDateString = apidate.toLocaleDateString(undefined, {  
+                    day : 'numeric',
+                    month : 'short',
+                    year : 'numeric'
+                })
+                console.log(localDateString)
+                let splited = localDateString.split(" ")
+                console.log(splited)
+                let date = splited.filter(splits => splits != "2020")
+                console.log(date)
+                let unformatted = date.join(" ")
+
+                let realDate = unformatted[unformatted.length - 1] == "," ? unformatted.replace(",", "") : unformatted
+
+                
                 let starred = repo.viewerHasStarred ? `<button class="repo-search-btn new-repo repo-star">
                 <svg class="octicon octicon-star-fill mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path></svg>
                 <p>unstar</p>
@@ -97,8 +122,8 @@ function createHtml(data) {
                         ${forkCount}
                         ${starCount}
                         <div class="options">
-                            <div class="options-symbol"></div>
-                            <p>Updated on jul 19</p>
+                            <div class="options-symbol date"></div>
+                            <p>Updated on ${realDate}</p>
                         </div>
                     </div>
                 </div>
