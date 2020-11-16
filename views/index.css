@@ -483,7 +483,6 @@ body,html {
     padding-left: 32px;
     padding-top: 10px;
     width: calc(100% - 280px);
-    position: relative;
 }
 
 
@@ -496,22 +495,73 @@ body,html {
     overflow: auto;
     margin-bottom: 25px;
     width: 100%;
-    position: -webkit-sticky !important;
-	position: sticky !important;
-	top: 0;
-
+    height: 47px;
+    border-bottom: 1px solid #eaecef
 }
+
+.hide{
+    height: 47px;
+    display: none;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    margin: 0 !important;
+    min-width: 100vw !important;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #eaecef;
+    transition: 0.5s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000000;
+    box-sizing: border-box;
+    padding: 0 10px 0 10px !important;
+    margin-left: -18px !important;
+    background-color: white;
+}
+
+.stickyy {
+    position: fixed;
+    top: 0;
+    min-width: 100vw !important;
+    z-index: 100;
+    background-color: white;
+    opacity: 1;
+    transition: 0.5s;
+    margin: 0;
+    height: 47px !important;
+}
+
+.sticky-pic{
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50%;
+    margin-right: 20px
+}
+
+.small-p{
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+  
 
 .repo-nav{
     display: flex;
     align-items: flex-end;
     padding: 12px 16px;
     font-size: 14px;
-    height: 32px;
+    height: 46px;
 }
 
 .repos ul li{
-    border-bottom: 1px solid rgb(228, 224, 224)
+    height: 46px !important;
+    border-bottom: 1px solid #eaecef
 }
 
 .repos ul li:hover{
@@ -903,6 +953,10 @@ body,html {
     .repository{
         display: flex;
         align-items: center
+    }
+
+    .stickyy, .hide{
+        display: none;
     }
 
 }

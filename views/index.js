@@ -4,6 +4,46 @@ let menuDropdown = document.querySelector(".mobile-dropdown")
 menu.addEventListener("click", function(){
   menuDropdown.classList.toggle("close")
 })
+
+// When the user scrolls the page, execute myFunction
+window.addEventListener("scroll", function() {
+    myFunction()
+    myFunctionn()
+})
+
+// Get the navbar
+var navbar = document.querySelector(".repos ul");
+
+var loginSicky = document.querySelector(".sticky-login")
+var hidden = document.querySelector(".hide")
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+var stickyy = 400
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+function myFunctionn() {
+    if (window.pageYOffset >= stickyy) {
+        console.log(stickyy)
+      hidden.classList.add("stickyy")
+    } else {
+      hidden.classList.remove("stickyy");
+    }
+  }
+
+
+
+
 let data = {}
 let Login = document.querySelectorAll(".login")
 let Bio = document.querySelector(".bio")
