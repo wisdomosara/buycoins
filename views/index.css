@@ -274,6 +274,14 @@ body,html {
     font-size: 14px 
 }
 
+.bio{
+    font-size: 16px !important;
+    color: #24292e;
+    font-weight: 400;
+    margin-top: -6px;
+    width: 280px;
+}
+
 .profile-img-div{
     display: flex;
     position: relative;
@@ -753,6 +761,11 @@ body,html {
         width: calc(100% - 24%);
         padding: 0 0 0 8px
     }
+
+    .bio{
+        
+        width: 100%;
+    }
 }
 
 
@@ -852,6 +865,10 @@ body,html {
     .repo-search{
         display: flex;
         flex-direction: column
+    }
+
+    .bio{
+        width: 100%;
     }
 
     .repo-search input{
