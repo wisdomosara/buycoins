@@ -352,6 +352,8 @@ body,html {
     height: 32px;
     margin-bottom: 16px;
     padding: 5px 16px;
+    transition: 0.5s;
+    outline: none;
     background-color: #fafbfc;
     border-style: none;
     border: 1px solid rgba(27,31,35,0.15);
@@ -369,10 +371,46 @@ body,html {
     margin-bottom: 25px;
 }
 
-.followers p, .followers i, .followers svg{
+.followers p, .followers svg{
     margin: 0;
+    font-weight: 400;
     margin-right: 5px;
     color: #586069;
+    fill: #586069;
+}
+
+.followers svg:hover{
+    fill: #006eed !important;
+    color: #006eed !important
+}
+
+.octicon-people:hover + p{
+    color: #006eed !important
+}
+.followers p:hover {
+    color: #006eed !important
+}
+
+.followers p:hover svg{
+    fill: #006eed !important
+}
+.website svg, .twitter svg{
+    fill: #586069 !important
+}
+
+.twitter a, .website a{
+    text-decoration: none;
+    color: #586069
+}
+
+.twitter a:hover, .website a:hover{
+    text-decoration: underline #006eed !important;
+    color: #006eed !important
+}
+
+.followersCount{
+    display: flex;
+    align-items: center
 }
 
 .profileStars{
@@ -380,6 +418,11 @@ body,html {
     align-items: center !important
 }
 
+.edit-btn:hover{
+    background-color: #e0e0e06c !important;
+    cursor: pointer;
+    transition: 0.5s
+}
 
 @media screen and (max-width: 767px){
     .details{
@@ -464,6 +507,10 @@ body,html {
     border-bottom: 2px solid rgb(206, 205, 205)
 }
 
+.octicon-book, .octicon-project, .octicon-package{
+    fill: #4646468e !important
+}
+
 .repos ul li:nth-child(2) {
     border-bottom: 2px solid #f9826c !important;
     color: #24292e !important;
@@ -492,16 +539,15 @@ body,html {
 }
 
 .repo-count{
-    padding: 6px;
-    height: 20px;
+    padding: 0 6px;
     margin-left: 10px;
-    background-color: #fafafa;
+    background-color: rgba(209,213,218,0.5);
     color: black;
     border-radius: 50%;
-    display: flex;
+    
     font-size: 12px;
     justify-content: center;
-    align-items: center;
+    
 }
 
 /* repo search */
@@ -541,16 +587,23 @@ body,html {
     justify-content: center;
     align-items: center;
     height: 32px;
-    
+    outline: none;
     margin-right: 6px;
     padding: 5px 16px;
     background-color: #fafbfc;
     border-style: none;
+    transition: 0.5s;
     border: 1px solid rgba(27,31,35,0.15);
     border-radius: 5px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
+}
+
+.repo-search-btn:hover{
+    background-color: #e0e0e07a !important;
+    cursor: pointer;
+    transition: 0.5s
 }
 
 .repo-search-btn p{
@@ -558,6 +611,10 @@ body,html {
     font-size: 14px;
     margin-right: 5px;
     color: #24292e
+}
+
+.input-type, .input-language{
+    font-weight: 500 !important
 }
 
 .repo-search-btn i{
@@ -574,6 +631,12 @@ body,html {
     background-color: #2ea44f;
     margin-right: 0 !important;
     color: white;
+}
+
+.new-repo:hover{
+    background-color:#21813c !important;
+    cursor: pointer;
+    transition: 0.5s
 }
 
 .new-repo .octicon-repo{
@@ -620,7 +683,9 @@ body,html {
 
 .repo-options-div{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
 }
 
 .repo-star{
@@ -633,21 +698,33 @@ body,html {
     color: #24292e !important;
 }
 
+
+.repo-star:hover{
+    background-color: #e0e0e07c !important;
+    cursor: pointer;
+    transition: 0.5s
+}
+
 .repo-star p{
     color: #24292e !important;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .options{
     display: flex;
-    margin-top: 16px;
-    align-items: flex-start;
+    align-items: center;
     margin-right: 10px;
+}
+
+.star-count{
+    font-size: 14px !important;
+    height: 16px;
 }
 
 .options p{
     margin: 0;
-    font-size: 12px
+    font-size: 12px;
+    color: #586069
 }
 
 .date{
@@ -655,16 +732,14 @@ body,html {
 }
 
 .options-symbol{
-    margin-right: 6px
+    margin-right: 6px;
+    max-height: 16px !important
 }
 
 .options svg{
     width: 16px
 }
 
-.languages{
-    margin-top: 2px
-}
 
 .fork {
     font-size: 12px
