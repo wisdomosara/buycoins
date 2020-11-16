@@ -592,19 +592,18 @@ body,html {
     width: 100%;
 }
 
-.repository-left{
-    width: 100%;
-}
 
 .repository-left h3{
     color: #0366d6;
     font-size: 20px;
     font-weight: 500;
     margin: 0;
+    width: fit-content
 }
 
 .repository-left a{
     text-decoration: none;
+    width: fit-content !important
 }
 
 .repository-left a:hover{
@@ -614,6 +613,7 @@ body,html {
 
 .repository-right{
     margin-left: 25px;
+    margin-left: auto
 }
 
 .repo-options-div{
@@ -651,6 +651,14 @@ body,html {
 
 .options svg{
     width: 16px
+}
+
+.languages{
+    margin-top: 2px
+}
+
+.fork {
+    font-size: 12px
 }
 
 /* tab screen */

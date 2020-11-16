@@ -53,7 +53,10 @@ app.get("/api/github", function(req, res) {
                       stargazerCount
                       isFork
                       viewerHasStarred
-                      
+                      primaryLanguage{
+                          name
+                          color
+                      }
                       forkCount
                       parent{
                         name
@@ -68,11 +71,7 @@ app.get("/api/github", function(req, res) {
                       isArchived
                       isDisabled
                       description
-                      languages(first: 3) {
-                          nodes {
-                            name
-                          }
-                        }
+                      
                     }
                   }
                 }
