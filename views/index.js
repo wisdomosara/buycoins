@@ -18,7 +18,13 @@ var loginSicky = document.querySelector(".sticky-login")
 var hidden = document.querySelector(".hide")
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+var sticky;
+
+if(window.innerWidth < 768) {
+    sticky = 400
+}else {
+    sticky = navbar.offsetTop
+}
 
 var stickyy = 400
 
