@@ -12,17 +12,10 @@ let languageModal = document.querySelector(".repo-dropdown-language")
 let typeModal = document.querySelector(".repo-dropdown-type")
 let ProfileModal = document.querySelector(".login-dropdown")
 
-let anyRepoBtn = document.querySelector(".repo-search-btn")
 
 //toggle the menu button on mobile view as open and close when clicked
 menu.addEventListener("click", function(){
     menuDropdown.classList.toggle("close")
-})
-
-anyRepoBtn.addEventListener("click", function(){
-    if(anyRepoBtn.classList.contains("modal")){
-        anyRepoBtn.classList.remove("modal")
-    }
 })
 
 
@@ -98,7 +91,7 @@ function repostick() {
 
 function loginStick() {
     if (window.pageYOffset >= stickyy) {
-        console.log(stickyy)
+       
       hidden.classList.add("stickyy")
     } else {
       hidden.classList.remove("stickyy");
@@ -130,7 +123,6 @@ fetch(`/api/github`)
         
 //function that creates the component for each repository while mapping the data from the server into their respective places 
 function createHtml(data) {
-  console.log(data)
 
   //destructure the data objects to get the needed bits of data and to ensure code readability
 
@@ -263,21 +255,21 @@ repositories.forEach(repo => {
         //add all the elements with class of repo star to an array
         //loop through all and add an even listener to them to change the star of the button when clicked
         let customStar = document.querySelectorAll(".repo-star")
-        console.log(customStar)
+        
         if(customStar.length == 20) {
             customStar.forEach(star => {
                 
                 star.addEventListener("click", function() {
                     
                     if(star.classList.contains("starred")) {
-                        console.log("star")
+                       
                         star.innerHTML = `<svg class="octicon octicon-star mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
                         <p>star</p>`
                         star.classList.remove("starred")
                         star.classList.add("unstarred")
                     }
                     else {
-                        console.log("unstar")
+                        
                         star.innerHTML = `<svg class="octicon octicon-star-fill mr-1" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path></svg>
                         <p>Unstar</p>`
                         star.classList.add("starred")
