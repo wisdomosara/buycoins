@@ -12,7 +12,7 @@ window.addEventListener("scroll", function() {
 })
 
 // Get the navbar
-var navbar = document.querySelector(".repos ul");
+var navbar = document.querySelector(".repo-nav-div");
 
 var loginSicky = document.querySelector(".sticky-login")
 var hidden = document.querySelector(".hide")
