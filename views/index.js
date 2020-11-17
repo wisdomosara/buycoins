@@ -6,6 +6,7 @@ let menuDropdown = document.querySelector(".mobile-dropdown")
 let languageDropdown = document.querySelector(".repo-languages")
 let typeDropdown = document.querySelector(".repo-type")
 let ProfileDropdown = document.querySelector(".profile-dropdown")
+let Shadow = document.querySelector(".mobile-shadow")
 let languageOpen = false
 let languageModal = document.querySelector(".repo-dropdown-language")
 let typeModal = document.querySelector(".repo-dropdown-type")
@@ -27,18 +28,40 @@ anyRepoBtn.addEventListener("click", function(){
 
 //toggle the mmodal class to show and hide the modal
 languageDropdown.addEventListener("click", function() {
-    languageOpen = !languageOpen
-    languageModal.classList.toggle("modal")
+    if(typeModal.classList.contains("modal")){
+        typeModal.classList.remove("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
+    else{
+        languageModal.classList.toggle("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
 })
 
 typeDropdown.addEventListener("click", function() {
-    languageOpen = !languageOpen
-    typeModal.classList.toggle("modal")
+    if(languageModal.classList.contains("modal")){
+        languageModal.classList.remove("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
+    else{
+        typeModal.classList.toggle("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
 })
 
 ProfileDropdown.addEventListener("click", function() {
     languageOpen = !languageOpen
     ProfileModal.classList.toggle("modal")
+})
+
+Shadow.addEventListener("click", function() {
+    if(typeModal.classList.contains("modal")) {
+        typeModal.classList.toggle("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }else if(languageModal.classList.contains("modal")){
+        languageModal.classList.toggle("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
 })
 
 // When the user scrolls the page, execute repoStick(to make the repo navbar sticky) and loginStick(to make the usernname and profile pic stick when user scrolls past the username)
