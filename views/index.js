@@ -4,7 +4,38 @@ let menuDropdown = document.querySelector(".mobile-dropdown")
 menu.addEventListener("click", function(){
   menuDropdown.classList.toggle("close")
 })
+let languageOpen = false
+let languageModal = document.querySelector(".repo-dropdown-language")
+let typeModal = document.querySelector(".repo-dropdown-type")
 
+let anyRepoBtn = document.querySelector(".repo-search-btn")
+
+anyRepoBtn.addEventListener("click", function(){
+    if(anyRepoBtn.classList.contains("modal")){
+        anyRepoBtn.classList.remove("modal")
+    }
+})
+
+let languageDropdown = document.querySelector(".repo-languages")
+let typeDropdown = document.querySelector(".repo-type")
+
+languageDropdown.addEventListener("click", function() {
+    languageOpen = !languageOpen
+    languageModal.classList.toggle("modal")
+    // if(!languageOpen){
+    //     languageModal
+    //     languageModal.style.animation = "animation: modal .12s cubic-bezier(0,.1,.1,1) backwards";
+    // }
+})
+
+typeDropdown.addEventListener("click", function() {
+    languageOpen = !languageOpen
+    typeModal.classList.toggle("modal")
+    // if(!languageOpen){
+    //     languageModal
+    //     languageModal.style.animation = "animation: modal .12s cubic-bezier(0,.1,.1,1) backwards";
+    // }
+})
 // When the user scrolls the page, execute myFunction
 window.addEventListener("scroll", function() {
     myFunction()

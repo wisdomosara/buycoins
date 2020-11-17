@@ -499,7 +499,7 @@ body,html {
     border-bottom: 1px solid #eaecef
 }
 
-.repos ul{
+.repos .ul{
     display: flex;
     list-style: none;
     padding: 0;
@@ -562,12 +562,12 @@ body,html {
     height: 46px;
 }
 
-.repos ul li{
+.repos .ul li{
     height: 46px !important;
     border-bottom: 1px solid #eaecef
 }
 
-.repos ul li:hover{
+.repos .ul li:hover{
     border-bottom: 2px solid rgb(206, 205, 205)
 }
 
@@ -575,17 +575,17 @@ body,html {
     fill: #4646468e !important
 }
 
-.repos ul li:nth-child(2) {
+.repos .ul li:nth-child(2) {
     border-bottom: 2px solid #f9826c !important;
     color: #24292e !important;
     font-weight: 600 !important;
 }
 
-.repos ul li:nth-child(2):hover {
+.repos .ul li:nth-child(2):hover {
     border-bottom: 2px solid #f9826c !important;
 }
 
-.repos ul li:nth-child(2) p{
+.repos .ul li:nth-child(2) p{
     color: #24292e !important;
     font-weight: 600 !important;
 }
@@ -638,9 +638,83 @@ body,html {
     box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
 }
 
-.repo-dropdown-language{
-    display: none
+.repo-dropdown{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 300px;
+    display: block !important;
+    background-color: white;
+    z-index: 2;
+    opacity: 0;
+    margin: 8px 0 16px;
+    border: 1px solid #e1e4e8;
+    pointer-events: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(149,157,165,0.2);
 }
+
+
+
+.modal{
+    animation: modal .12s cubic-bezier(0,.1,.1,1) forwards;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+@keyframes modal {
+    0%{
+        opacity: 0;
+        transform: translateY(-16px)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.repo-dropdown-check{
+    width: 25px;
+    margin: 0;
+    text-align: left;
+    margin-top: 4px !important;
+}
+
+.repo-dropdown-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 7px 7px 16px;
+    font-size: 16px;
+}
+
+.repo-dropdown ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start
+}
+
+.repo-dropdown ul li{
+    padding: 7px 16px;
+    display: flex;
+    min-width: 100%;
+    height: 33px;
+    align-items: center;
+    border-top: 1px solid #eaecef;
+}
+
+.repo-dropdown ul li:hover{
+    background-color: #f6f8fa
+}
+
+.repo-dropdown-heading p{
+    margin: 0;
+}
+
 
 .repo-dropdown-type{
     display: none
@@ -653,6 +727,7 @@ body,html {
     height: 32px;
     outline: none;
     margin-right: 6px;
+    position: relative;
     padding: 5px 16px;
     background-color: #fafbfc;
     border-style: none;
@@ -942,8 +1017,39 @@ body,html {
     .repo-search-btn-div{
         display: flex;
         width: 100%;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: visible;
     
+    }
+
+    .repo-dropdown{
+        max-width: 80vw ;
+        min-width: 80vw ;
+        position: fixed;
+        transform: translateY(-50%);
+        top: 20%;
+        right:10%;
+        max-height: 66%;
+        overflow: auto;
+        border-radius: 12px
+    }
+
+    .repo-dropdown ul li{
+        padding: 16px;
+        display: flex;
+        min-width: 100%;
+        height: 54px;
+        align-items: center;
+        border-top: 1px solid #eaecef;
+    }
+
+    .repo-dropdown-heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        height: 54px;
+        font-size: 16px;
     }
 
     .new-repo {

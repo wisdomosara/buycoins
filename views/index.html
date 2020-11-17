@@ -13,6 +13,8 @@
 <body>
 
     <header>
+
+        <!-- Big screen header starts here -->
         <div class="big-screen-nav">
             <nav>
                 <div class="big-screen-nav-left center-flex">
@@ -50,7 +52,9 @@
                 </div>
             </nav>
         </div>
+        <!-- big screen header stops here -->
         
+        <!-- small screen header starts here -->
         <div class="small-screen-nav">
             <nav>
                 <div class="menu">
@@ -91,22 +95,31 @@
                 </ul>
             </div>
         </div>
+        <!-- small screen header stops here -->
 
     </header>
+
+    <!-- header ends here -->
+
+    <!-- section for profile and Repos starts -->
     <section>
+        <!-- profile details start -->
        <div class="details">
             <div class="profile">
                 <div class="profile-img-div">
+                    <!-- profile-picture -->
                     <img  alt="" class="profilePic">
                     <p class="login sticky-login"></p>
                     <div class="hide">
                         <img  class="profilePic sticky-pic">
                         <p class="login small-p"></p>
                     </div>
+                    <!-- smiley for big screen -->
                     <div class="big-screen-smiley">
                         <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
                     </div>
                 </div>
+                <!-- smiley for small screen -->
                 <button class="small-screen-smiley">
                     <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
                     <p>Set status</p>
@@ -124,9 +137,15 @@
                 <div class="organizations">
                 </div>
             </div>
+
+            <!-- profile ends -->
+            
+            <!-- repo div begins -->
             <div class="repos">
+
+                <!-- repo nav(tab list) -->
                 <div class="repo-nav-div">
-                    <ul>
+                    <ul class="ul">
                         <li>
                             <div class="repo-nav">
                                 <svg class="octicon octicon-book UnderlineNav-octicon hide-sm" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path></svg>
@@ -159,17 +178,20 @@
                         </li>
                     </ul>
                 </div>
+                <!-- repo nav ends -->
+
+                <!-- repo search div starts -->
                 <div class="repo-search">
                     <input type="search" placeholder="Find a repository">
                     <div class="repo-search-btn-div">
-                        <button class="repo-search-btn">
+                        <button class="repo-search-btn repo-type">
                             <p>Type: </p>
                             <p class="input-type">All</p>
                             <i class="fas fa-caret-down"></i>
-                            <div class="repo-dropdown-type">
+                            <div class="repo-dropdown-type repo-dropdown">
                                 <div class="repo-dropdown-heading">
                                     <p>Select Type</p>
-                                    <p class="close-repo">X</p>
+                                    <p class="close-repo"><svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></p>
                                 </div>
                                 <ul>
                                     <li class="repo-dropdown-item" id="All">
@@ -203,18 +225,18 @@
                                 </ul>
                             </div>
                         </button>
-                        <button class="repo-search-btn">
+                        <button class="repo-search-btn repo-languages">
                             <p>Language: </p>
                             <p class="input-language">All</p>
                             <i class="fas fa-caret-down"></i>
-                            <div class="repo-dropdown-language">
+                            <div class="repo-dropdown-language repo-dropdown">
                                 <div class="repo-dropdown-heading">
                                     <p>Select language</p>
-                                    <p class="close-repo">X</p>
+                                    <p class="close-repo"><svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></p>
                                 </div>
                                 <ul>
                                     <li class="repo-dropdown-item" id="All">
-                                        <p class="repo-dropdown-check"></p>
+                                        <p class="repo-dropdown-check"><svg class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></p>
                                         <p>All</p>
                                     </li>
                                     <li class="repo-dropdown-item" id="HTML">
@@ -238,15 +260,15 @@
                         </button>
                     </div>
                 </div>
-                
-                
+                <!-- repo search div ends -->
+
             </div>
+            <!-- repo div ends -->
             
        </div> 
     </section>
-    <section class="main">
+    <!-- section for profile and repos ends -->
 
-    </section>
     <script src="./index.js"></script>
 </body>
 </html>
