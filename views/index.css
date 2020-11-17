@@ -180,7 +180,7 @@ body,html {
     position: absolute;
     top: 100%;
     right: 5px;
-    z-index: 100;
+    z-index: 10000;
     width: 160px;
     padding-top: 4px;
     transition: 0.5s;
@@ -710,9 +710,8 @@ body,html {
     top: 100%;
     right: 0;
     min-width: 300px;
-    display: block !important;
     background-color: white;
-    z-index: 1 !important;
+    z-index: 1;
     opacity: 0;
     margin: 8px 0 16px;
     border: 1px solid #e1e4e8;
@@ -727,7 +726,7 @@ body,html {
     animation: modal .12s cubic-bezier(0,.1,.1,1) forwards;
     cursor: pointer;
     pointer-events: all;
-    z-index: 1 !important
+    z-index: 100000 !important
 }
 
 
