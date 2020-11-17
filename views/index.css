@@ -8,6 +8,8 @@ body,html {
     box-sizing: border-box
 }
 
+
+/* navbar for big screen */
 .big-screen-nav nav{
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,8 @@ body,html {
     padding: 15px 2.27% 15px 2.27%;
 }
 
+
+/* big screen navbar is hidden on small screen */
 @media screen and (max-width: 767px) {
     .big-screen-nav nav{
         display: none
@@ -45,6 +49,7 @@ body,html {
     margin-right: 15px
 }
 
+/* navigation list is different on tablet view so it is hidden on bigger screen and small screen devices */
 .tab-list{
     display: none
 }
@@ -58,6 +63,8 @@ body,html {
     }
 }
 
+
+/* Search Bar container */
 .nav-search{
     border: 1px solid #444d56;
     border-radius: 4px;
@@ -75,6 +82,8 @@ body,html {
     }
 }
 
+
+/* seacrh bar input field */
 .nav-search input{
     outline: none;
     width: 100%;
@@ -83,11 +92,11 @@ body,html {
     color: white;
     background-color: transparent
 }
+
+/* Styling the placeholder text */
 .nav-search input::placeholder{
-   
     color: #afaeae;
     font-weight: 600;
-    
 }
 
 .search-icon{
@@ -152,7 +161,8 @@ body,html {
 }
 
 .profile-dropdown{
-    margin-right: 0 !important
+    margin-right: 0 !important;
+    position: relative;
 }
 
 .profile-dropdown i{
@@ -165,18 +175,118 @@ body,html {
     margin-right:5px
 }
 
-/* mobile nav */
+.login-dropdown{
+    position: absolute;
+    top: 100%;
+    right: 5px;
+    z-index: 100;
+    width: 160px;
+    padding-top: 4px;
+    transition: 0.5s;
+    padding-bottom: 4px;
+    margin-top: 10px;
+    opacity: 0;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #e1e4e8;
+    pointer-events: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(149,157,165,0.2);
+}
 
-.small-screen-nav{
-    background-color: #24292e;
-    color: white
+.login-dropdown .login{
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 8px !important;
 }
-.small-screen-nav nav{
+
+.login-dropdown p{
+    margin: 0;
+    padding-left: 16px;
+    color: #24292e;
+    font-weight: 400;
+    font-size: 14px
+}
+
+.login-dropdown ul{
+    padding-top: 8px;
+    border-top: 1px solid #e1e4e8;
+    padding-bottom: 4px
+}
+
+
+.login-dropdown:before {
+    top: -16px;
+    right: 9px;
+    left: auto;
+}
+
+.login-dropdown:before {
+    border: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.login-dropdown:after {
+    border: 7px solid transparent;
+    border-bottom: 7px solid white;
+}
+
+.login-dropdown:after {
+    top: -14px;
+    right: 10px;
+    left: auto;
+}
+
+.login-dropdown:after, .login-dropdown:before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+}
+
+.login-dropdown .small-screen-smiley{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start !important;
     align-items: center;
-    padding: 16px 18px 16px 17px;
+    width: 128px;
+    height: 33px;
+    margin: 8px 16px 8px 16px;
+    padding: 4px 10px;
+    background-color: #ffffff;
+    border-style: none;
+    border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 3px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 hsla(0,0%,100%,0.25);
 }
+
+.small-screen-smiley:hover svg, .small-screen-smiley:hover p{
+    fill: #006eed !important;
+    color: #006eed !important
+}
+
+.login-dropdown .small-screen-smiley p{
+    margin: 0;
+    padding: 0;
+    margin-left: 10px !important;
+    font-weight: 400;
+    font-size: 12px
+}
+
+.login-dropdown ul li{
+    color: #24292e;
+    padding: 4px 8px 4px 16px;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.login-dropdown ul li:hover{
+    background-color: #006eed;
+    color: white;
+}
+
+
+/* mobile nav */
 
 @media screen and (min-width: 768px) {
     .small-screen-nav{
@@ -184,63 +294,9 @@ body,html {
     }
 }
 
-.bar{
-    background-color: rgb(219, 215, 215);
-    width: 20px;
-    height: 2px;
-    margin-bottom: 5px;
-}
-
-.bar:last-child{
-    margin-bottom: 0;
-}
-
 .github-img{
     width: 32px;
     border-radius: 50%;
-}
-
-.mobile-dropdown{
-    padding: 1px 16px 1px 16px;
-    display: none
-}
-
-.close{
-    display: block
-}
-
-.mobile-dropdown ul{
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-.mobile-dropdown ul li{
-    border-bottom: 1px solid #e1e4e844;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 14px;
-    font-weight: 600
-}
-
-.mobile-dropdown ul li:last-child{
-    border-bottom: none;
-    padding-top: 8px;
-    padding-bottom: 20px;
-}
-
-.mobile-menu-login img{
-    border-radius: 50%;
-    width: 30px
-}
-
-.mobile-menu-login p{
-    margin: 0;
-    margin-left: 5px
-}
-
-.sign-out p{
-    margin: 0
 }
 
 /* details section */
@@ -306,6 +362,8 @@ body,html {
     color: #586069 !important
 }
 
+
+
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .profile-img-div img{
         width: 100%;
@@ -318,6 +376,7 @@ body,html {
     }
     
 }
+
 
 .small-screen-smiley{
     display: none;
@@ -454,7 +513,6 @@ body,html {
 
     .profile{
         padding: 16px 8px 0 0;
-        
     }
     
 }
@@ -482,6 +540,8 @@ body,html {
         display: flex;
     }
 }
+
+
 
 /* Repositories */
 
@@ -516,6 +576,7 @@ body,html {
     align-items: center;
     opacity: 0;
     margin: 0 !important;
+    pointer-events: none;
     min-width: 100vw !important;
     z-index: 1000;
     background-color: white;
@@ -523,6 +584,8 @@ body,html {
     transition: 0.5s;
 }
 
+
+/* class to make the repo-navigation sticky when you scroll down */
 .sticky {
     position: fixed;
     top: 0;
@@ -533,6 +596,8 @@ body,html {
     background-color: white;
 }
 
+
+/* class to make the username and profile image sticky when you scroll past the username field only on tablet and bigger screen */
 .stickyy {
     position: fixed;
     top: 0;
@@ -545,14 +610,14 @@ body,html {
     height: 47px !important;
 }
 
+
+/* profile picture on the sticky class */
 .sticky-pic{
     width: 32px !important;
     height: 32px !important;
     border-radius: 50%;
     margin-right: 20px
 }
-
-  
 
 .repo-nav{
     display: flex;
@@ -614,6 +679,7 @@ body,html {
     
 }
 
+
 /* repo search */
 
 .repo-search{
@@ -655,13 +721,15 @@ body,html {
 }
 
 
-
+/* class that brings in the modals, it is added with javascript */
 .modal{
     animation: modal .12s cubic-bezier(0,.1,.1,1) forwards;
     cursor: pointer;
     pointer-events: all;
 }
 
+
+/* animations to bring in the moddals for the search buttons */
 @keyframes modal {
     0%{
         opacity: 0;
@@ -787,6 +855,8 @@ body,html {
     margin-left: 5px
 }
 
+
+
 /* Repository-list */
 
 .repository{
@@ -909,6 +979,76 @@ body,html {
 /* mobile screen */
 
 @media screen and (max-width: 767px) {
+    .login-dropdown{
+        display: none
+    }
+
+    .small-screen-nav{
+        background-color: #24292e;
+        color: white
+    }
+    .small-screen-nav nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 18px 16px 17px;
+    }
+    
+    
+    .bar{
+        background-color: rgb(219, 215, 215);
+        width: 20px;
+        height: 2px;
+        margin-bottom: 5px;
+    }
+    
+    .bar:last-child{
+        margin-bottom: 0;
+    }
+    
+    .mobile-dropdown{
+        padding: 1px 16px 1px 16px;
+        display: none
+    }
+    
+    .close{
+        display: block
+    }
+    
+    .mobile-dropdown ul{
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+    
+    .mobile-dropdown ul li{
+        border-bottom: 1px solid #e1e4e844;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600
+    }
+    
+    .mobile-dropdown ul li:last-child{
+        border-bottom: none;
+        padding-top: 8px;
+        padding-bottom: 20px;
+    }
+    
+    .mobile-menu-login img{
+        border-radius: 50%;
+        width: 30px
+    }
+    
+    .mobile-menu-login p{
+        margin: 0;
+        margin-left: 5px
+    }
+    
+    .sign-out p{
+        margin: 0
+    }
+    
     .profile{
         width: 100%;
         padding: 16px 0 0 0;
@@ -982,19 +1122,10 @@ body,html {
         display: none
     }
 
-    .website{
-
-    }
-
     .repos{
         padding: 0;
         width: 100%;
     }
-
-
-    /* .repo-nav{
-        padding: 8px 16px
-    } */
 
     .repo-search{
         display: flex;
