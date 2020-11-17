@@ -1249,12 +1249,16 @@ body,html {
         background-color: #0c040477 !important
     }
 
-    .modal{
-        z-index: 99 !important
+    .repo-type .repo-dropdown-type .modal{
+        z-index: 1000
     }
 
-    .hide-shadow:target .repo-languages{
-        z-index: 1
+    .repo-languages{
+        z-index: 3
+    }
+
+    .repo-type{
+        z-index: 4;
     }
 
 }
