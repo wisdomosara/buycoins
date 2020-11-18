@@ -161,6 +161,7 @@ body,html {
 }
 
 .profile-dropdown{
+    cursor: pointer;
     margin-right: 0 !important;
     position: relative;
 }
@@ -1256,7 +1257,7 @@ body,html {
     }
 
     .repo-type{
-        z-index: 4;
+        z-index: 2;
     }
 
 }

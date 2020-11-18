@@ -31,20 +31,10 @@ languageDropdown.addEventListener("click", function() {
     }
 })
 
-typeDropdown.addEventListener("click", function() {
-    if(languageModal.classList.contains("modal")){
-        languageModal.classList.remove("modal")
-        Shadow.classList.toggle("hide-shadow")
-    }
-    else{
-        typeModal.classList.toggle("modal")
-        Shadow.classList.toggle("hide-shadow")
-    }
-})
-
 ProfileDropdown.addEventListener("click", function() {
     languageOpen = !languageOpen
     ProfileModal.classList.toggle("modal")
+    Shadow.classList.toggle("hide-shadow")
 })
 
 Shadow.addEventListener("click", function() {
@@ -53,6 +43,10 @@ Shadow.addEventListener("click", function() {
         Shadow.classList.toggle("hide-shadow")
     }else if(languageModal.classList.contains("modal")){
         languageModal.classList.toggle("modal")
+        Shadow.classList.toggle("hide-shadow")
+    }
+    else if(ProfileModal.classList.contains("modal")){
+        ProfileModal.classList.toggle("modal")
         Shadow.classList.toggle("hide-shadow")
     }
 })

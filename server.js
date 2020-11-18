@@ -49,7 +49,7 @@ app.get("/api/github", function(req, res) {
                       avatarUrl
                     }
                   }
-                  repositories(first: 20) {
+                  repositories(first: 20,orderBy: {field: UPDATED_AT, direction: DESC}) {
                     nodes{
                       name
                       url
