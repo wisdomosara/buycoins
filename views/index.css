@@ -49,6 +49,16 @@ body,html {
     margin-right: 15px
 }
 
+.center-flex li:hover {
+    color: rgb(202, 201, 201);
+    cursor: pointer;
+}
+
+.mobile-dropdown li:hover{
+    color: rgb(202, 201, 201);
+    cursor: pointer;
+}
+
 /* navigation list is different on tablet view so it is hidden on bigger screen and small screen devices */
 .tab-list{
     display: none
