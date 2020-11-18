@@ -1,5 +1,5 @@
-"# buycoins Test" 
-"# Git Hub Profile Page Clone" 
+# buycoins Test
+# Git Hub Profile Page Clone
 
 live Link: https://wisdombuycoins.herokuapp.com
 
