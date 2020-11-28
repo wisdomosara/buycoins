@@ -1,6 +1,5 @@
 //grab all the necessary elements
 
-
 let menu = document.querySelector(".menu")
 let menuDropdown = document.querySelector(".mobile-dropdown")
 let languageDropdown = document.querySelector(".repo-languages")
