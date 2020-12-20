@@ -1,32 +1,31 @@
-
 //the only reason why this server is used is to hide my github API key using the environment variables which i added on heroku
 //the api can't be hidden with client javascript
-require('dotenv').config()
-const express = require("express")
-const fetch = require('node-fetch');
+require("dotenv").config();
+const express = require("express");
+const fetch = require("node-fetch");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use(express.urlencoded())
-app.use(express.static("views"))
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.static("views"));
 
 //sends the file for the page
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "index.html")
-})
+  res.sendFile(__dirname + "index.html");
+});
 
 //listen to a get reqest from the client javascript on this route for requests to the graphql server
 app.get("/api/github", function(req, res) {
-    const options = {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `${process.env.ACCESS_TOKEN}`
-        },//authorize the request with my github access token api key
-        body: JSON.stringify({
-            //graphql query for the details i need
-            query: `query { 
+  const options = {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${process.env.ACCESS_TOKEN}`
+    }, //authorize the request with my github access token api key
+    body: JSON.stringify({
+      //graphql query for the details i need
+      query: `query { 
               repositoryOwner(login: "wisdomosara") {
                 login
                 ... on User {
@@ -49,7 +48,7 @@ app.get("/api/github", function(req, res) {
                       avatarUrl
                     }
                   }
-                  repositories(first: 20,orderBy: {field: UPDATED_AT, direction: DESC}) {
+                  repositories(privacy: PUBLIC, first: 20,orderBy: {field: UPDATED_AT, direction: DESC}) {
                     nodes{
                       name
                       url
@@ -82,15 +81,15 @@ app.get("/api/github", function(req, res) {
                 }
               }
             }`
-              })
-        };
-    //make the request here and send back the data gotten back to the client side javascript for further processing
-    fetch(`https://api.github.com/graphql`, options)
-        .then(redey => redey.json())
-        .then(data => res.json(data))
-})
+    })
+  };
+  //make the request here and send back the data gotten back to the client side javascript for further processing
+  fetch(`https://api.github.com/graphql`, options)
+    .then(redey => redey.json())
+    .then(data => res.json(data));
+});
 
 //listen to the port on heroku or 3000 if on local machine
 app.listen(process.env.PORT || 3000, () => {
-    console.log("server started")
-})
+  console.log("server started");
+});

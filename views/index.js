@@ -64,32 +64,28 @@ var hidden = document.querySelector(".hide")
 // Get the offset position of the navbar
 var sticky;
 
-if(window.innerWidth < 768) {
-    sticky = 400
-}else {
-    sticky = navbar.offsetTop
-}
+sticky = navbar.offsetTop
 
 var stickyy = 400
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function repostick() {
-  if (window.pageYOffset >= sticky) {
+// function repostick() {
+//   if (window.pageYOffset >= sticky) {
     
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
 
-function loginStick() {
-    if (window.pageYOffset >= stickyy) {
+// function loginStick() {
+//     if (window.pageYOffset >= stickyy) {
        
-      hidden.classList.add("stickyy")
-    } else {
-      hidden.classList.remove("stickyy");
-    }
-}
+//       hidden.classList.add("stickyy")
+//     } else {
+//       hidden.classList.remove("stickyy");
+//     }
+// }
 
 //initialize an empty data obkect, when the data comes from backend, we copy it into the data
 let data = {}
